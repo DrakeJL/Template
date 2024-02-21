@@ -1,0 +1,83 @@
+// C++ code
+//
+const int buttonPin1 = 7;
+const int buttonPin2 = 6;
+const int buttonPin3 = 5;
+int buttonstate1 = 0;
+int buttonstate2 = 0;
+int buttonstate3 = 0;
+
+void setup()
+{
+  pinMode(buttonPin1, INPUT);
+  pinMode(buttonPin2, INPUT);
+  pinMode(buttonPin3, INPUT);
+    
+  pinMode(13, OUTPUT);//Farol Branco 1
+  pinMode(12, OUTPUT);//Farol Branco 2
+  pinMode(11, OUTPUT);//Farol F Amarelo
+  pinMode(10, OUTPUT);//Farol F Amarelo 2
+  pinMode(9,OUTPUT);//Farol T Amarelo
+  pinMode(8,OUTPUT);//Farol T Amarelo 2
+}
+
+void loop()
+{
+  
+  buttonstate1 = digitalRead(buttonPin1);
+  buttonstate2 = digitalRead(buttonPin2);
+  buttonstate3 = digitalRead(buttonPin3);
+  
+  if (buttonstate1 == HIGH){
+  
+  digitalWrite(13, HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,LOW);
+  delay(500);
+  digitalWrite(13, HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,LOW);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,LOW);
+  delay(500);
+}
+{
+  if (buttonstate2 == HIGH){
+  
+  digitalWrite(13, HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,LOW);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,LOW);
+  digitalWrite(8,HIGH);
+  delay(500);
+  digitalWrite(13, HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,LOW);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,LOW);
+  delay(500);
+  }
+
+  if (buttonstate3 == HIGH){
+  
+  digitalWrite(13, HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(9,HIGH);
+  digitalWrite(8,HIGH);
+  delay(500);
+  digitalWrite(13, HIGH);
+  digitalWrite(12,HIGH);
+  digitalWrite(11,LOW);
+  digitalWrite(10,LOW);
+  digitalWrite(9,LOW);
+  digitalWrite(8,LOW);
+  delay(500);
+  }}}
