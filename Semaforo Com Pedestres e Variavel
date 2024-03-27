@@ -1,0 +1,63 @@
+
+int led[5];//DEFINIR QUANTOS LEDS TERA O CONJUNTO 
+
+void setup() {
+
+  //Semaforo Carros  
+  led[0] = 13;//DEFINO QUAL LED VOU REFERENCIAR
+  led[1] = 12;
+  led[2] = 11;
+  
+  //Semaforo Pedestres
+  led[3] = 10;
+  led[4] = 9;
+  
+  //Carros
+  pinMode(led[0], OUTPUT);//DEFINO COMO O LED VAI SE COMTAR
+  pinMode(led[1], OUTPUT);
+  pinMode(led[2], OUTPUT);
+  
+  //Pedestres
+  pinMode(led[3], OUTPUT);
+  pinMode(led[4], OUTPUT);
+
+}
+
+void loop() {
+
+  //Carros
+  digitalWrite(led[0], LOW);// Vermelho
+  digitalWrite(led[1], HIGH);//Amarelo
+  digitalWrite(led[2], LOW);//Verde
+  
+  //Pedestres
+  digitalWrite(led[3], LOW);//Verde
+  digitalWrite(led[4], HIGH);//Vermelho  
+  
+  delay(3000); 
+  
+ 
+  //Carros
+  digitalWrite(led[0], HIGH);// Vermelho
+  digitalWrite(led[1], LOW);//Amarelo
+  digitalWrite(led[2], LOW);//Verde
+  
+  //Pedestres
+  digitalWrite(led[3], HIGH);//Verde
+  digitalWrite(led[4], LOW);//Vermelho
+  
+  delay(3000); 
+  
+  
+  //Carros
+  digitalWrite(led[0], LOW);// Vermelho
+  digitalWrite(led[1], LOW);//Amarelo
+  digitalWrite(led[2], HIGH);//Verde
+  
+  //Pedestres
+  digitalWrite(led[3], LOW);//Verde
+  digitalWrite(led[4], HIGH);//Vermelho
+               
+  delay(3000);          
+
+}
